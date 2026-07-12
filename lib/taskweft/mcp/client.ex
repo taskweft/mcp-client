@@ -17,14 +17,14 @@ defmodule Taskweft.MCP.Client do
 
       {:ok, client} = Taskweft.MCP.Client.connect({:stdio,
         command: "/usr/bin/env",
-        args: ["bash", "-c", "cd /path/to/minizinc-mcp && exec mix mcp.server"]
+        args: ["bash", "-c", "cd /path/to/peer-mcp && exec mix mcp.server"]
       })
 
       {:ok, %{"tools" => tools}} = Taskweft.MCP.Client.list_tools(client)
 
       {:ok, result} = Taskweft.MCP.Client.call_tool(client,
-        "minizinc_solve",
-        %{"model_content" => "var 0..9: x;\\nsolve satisfy;"}
+        "some_tool",
+        %{"arg" => "value"}
       )
 
       Taskweft.MCP.Client.disconnect(client)

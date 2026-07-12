@@ -2,8 +2,8 @@ defmodule Taskweft.MCP.PeerBehaviour do
   @moduledoc """
   Contract for a peer MCP server connection.
 
-  Implement this behaviour to swap the concrete peer (e.g. replace the
-  real minizinc-mcp with a test double via `mox`).
+  Implement this behaviour to swap the concrete peer (e.g. replace a
+  real peer MCP server with a test double via `mox`).
   """
 
   @callback connect(Taskweft.MCP.Client.connection_spec(), keyword()) ::
