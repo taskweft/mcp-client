@@ -18,7 +18,6 @@ defmodule Taskweft.MCP.Client.MixProject do
 
   defp package do
     [
-      organization: "chibifire",
       files: ~w(lib config mix.exs LICENSE*),
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/taskweft/mcp-client"}
