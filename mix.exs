@@ -34,7 +34,8 @@ defmodule Taskweft.MCP.Client.MixProject do
       {:jason, "~> 1.4"},
       {:dialyxir, "~> 1.4", only: [:dev], runtime: false},
       {:propcheck, "~> 1.4", only: [:test, :dev], runtime: false},
-      {:mox, "~> 1.2", only: :test}
+      {:mox, "~> 1.2", only: :test},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 end
